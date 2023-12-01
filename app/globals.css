@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  height: 50vh;
+}
+
+.main:before {
+  background: linear-gradient(
+    0deg,
+    rgba(13, 13, 13, 1) 25%,
+    rgba(38, 38, 38, 0) 100%
+  );
+  position: absolute;
+  content: "";
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/images/grid.svg");
+  background-size: 35%;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+}
+
+.gradient {
+  top: 0;
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(0deg, #0d0d0d, #262626);
+}
