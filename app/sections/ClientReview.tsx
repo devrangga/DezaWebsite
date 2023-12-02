@@ -9,7 +9,7 @@ import ClientReviewCard from "../components/ClientReviewCard";
 const ClientReview = () => {
   return (
     <div className="flex flex-col gap-4 mt-8">
-      <h1 className="text-center text-2xl font-bold">Client Reviews.</h1>
+      <h1 className="text-center text-3xl font-bold">Client Reviews.</h1>
       <Swiper
         spaceBetween={15}
         slidesPerView={1}

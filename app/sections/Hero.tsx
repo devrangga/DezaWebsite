@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 const Hero: React.FC = () => {
   return (
     <div className="relative">
-      <div className="main h-[50vh] md:h-[75vh]">
+      <div className="main h-[50vh] sm:h-[60vh] md:h-[75vh]">
         <div className="gradient">
           <div className="gradient2"></div>
         </div>
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         <div className="text-zinc-100 text-xl md:text-xl  lg:text-3xl ">
           ELEVATE YOUR BRAND
         </div>
-        <div className="text-zinc-100 text-4xl md:text-6xl lg:text-7xl font-black">
+        <div className="text-zinc-100 text-3xl md:text-6xl lg:text-7xl font-black">
           <TypeAnimation
             sequence={[
               "WITH WUW STYLE",
