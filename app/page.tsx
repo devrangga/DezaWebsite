@@ -1,23 +1,24 @@
 "use client";
 
-import React from "react";
 import ClientReview from "./sections/ClientReview";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import WhyDeza from "./sections/WhyDeza";
 import AgenyInNumbers from "./sections/AgenyInNumbers";
 import Faq from "./sections/Faq";
+import RecentWorks from "./sections/RecentWorks";
 
-const page = () => {
+const page: React.FC = () => {
   return (
-    <div>
+    <main>
       <Navbar />
       <Hero />
       <WhyDeza />
       <AgenyInNumbers />
+      <RecentWorks />
       <ClientReview />
       <Faq />
-    </div>
+    </main>
   );
 };
 

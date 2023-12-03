@@ -1,10 +1,13 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { navbarData } from "../constant";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [windowWidth, setWindowWith] = useState<Number>(0);
+  const [windowWidth, setWindowWith] = useState<number>(0);
 
   useEffect(() => {
     const handleResizeWidth = () => {
@@ -19,39 +22,53 @@ const Navbar: React.FC = () => {
   const isLarge: boolean = windowWidth > 1024;
 
   return (
-    <div className="fixed z-20 w-[75%] top-10 -translate-x-1/2 left-1/2">
-      <div
-        className={
-          "flex justify-between items-center border-zinc-400 border-[1px] px-6 py-4 rounded-lg backdrop-blur-lg bg-zinc-950/50 relative z-50"
-        }
-      >
-        <Image
-          src={"/images/dezaLogo.svg"}
-          width={25}
-          height={25}
-          alt={"Deza Logo"}
-        />
-        <button
-          className={`flex flex-col gap-2 ${isMenuOpen ? "transform " : ""}`}
-          onClick={() => setIsMenuOpen((prev) => !prev)}
+    <section className="fixed z-20 w-[75%] top-10 -translate-x-1/2 left-1/2">
+      {isLarge ? (
+        <div
+          className={
+            "flex justify-between items-center border-zinc-400 border-[1px] px-20 py-6 text-lg rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50 text-zinc-200 hover:text-zinc-50"
+          }
         >
-          <div
-            className={`w-7 h-[3px] bg-zinc-50 transition-transfrom duration-300 ${
-              isMenuOpen ? "rotate-45 translate-y-[11px]" : ""
-            }`}
-          ></div>
-          <div
-            className={`w-7 h-[3px] bg-zinc-50 transition-opacity duration300 ${
-              isMenuOpen ? "opacity-0" : ""
-            }`}
-          ></div>
-          <div
-            className={`w-7 h-[3px] bg-zinc-50 transition-transform duration-300 ${
-              isMenuOpen ? "-rotate-45 -translate-y-[11px]" : ""
-            }`}
-          ></div>
-        </button>
-      </div>
+          {navbarData.map((item, index) => (
+            <Link key={index} href={item.url} className="hover:cursor-pointer">
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div
+          className={
+            "flex justify-between items-center border-zinc-400 border-[1px] px-6 py-4 rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50"
+          }
+        >
+          <Image
+            src={"/images/dezaLogo.svg"}
+            width={25}
+            height={25}
+            alt={"Deza Logo"}
+          />
+          <button
+            className={`flex flex-col gap-2 ${isMenuOpen ? "transform " : ""}`}
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <div
+              className={`w-7 h-[3px] bg-zinc-50 transition-transfrom duration-300 ${
+                isMenuOpen ? "rotate-45 translate-y-[11px]" : ""
+              }`}
+            ></div>
+            <div
+              className={`w-7 h-[3px] bg-zinc-50 transition-opacity duration300 ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            ></div>
+            <div
+              className={`w-7 h-[3px] bg-zinc-50 transition-transform duration-300 ${
+                isMenuOpen ? "-rotate-45 -translate-y-[11px]" : ""
+              }`}
+            ></div>
+          </button>
+        </div>
+      )}
 
       <div
         className={`${
@@ -76,7 +93,7 @@ const Navbar: React.FC = () => {
           <Link href={"#"}>Reach Out</Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,23 @@
 import { type } from "os";
+import {
+  imgOne,
+  imgTwo,
+  imgThree,
+  imgFour,
+  imgFive,
+  imgSix,
+  imgSeven,
+  imgEight,
+  imgNine,
+  imgTen,
+  imgEleven,
+  imgTwelve,
+  imgThirteen,
+  imgFourteen,
+  imgFifteen,
+  imgSixteen,
+} from "@/public/images";
+import { StaticImageData } from "next/image";
 
 type whydeza = {
   title: string;
@@ -39,7 +58,7 @@ type faqcard = {
 
 export const faqCard: faqcard[] = [
   {
-    question: "Can Deza Handle Social Media on Instagram?",
+    question: "Can We Handle Social Media?",
     answer:
       "Yes! Of Course Deza can handle Social Media on Instagram and help your brand grow up extremely fast so your brand can reach clients fast!",
     selected: false,
@@ -68,34 +87,167 @@ export const faqCard: faqcard[] = [
       "At Deza, we prioritize the security and privacy of your data. We use industry-standard encryption and security measures to ensure that your information is safe and protected.",
     selected: false,
   },
+];
+
+type navbar = {
+  title: string;
+  url: string;
+};
+export const navbarData: navbar[] = [
+  { title: "About", url: "#About" },
+  { title: "Projects", url: "#Projects" },
+  { title: "Reviews", url: "#Reviews" },
+  { title: "FAQs", url: "#FAQs" },
+  { title: "Reach Out", url: "#Reach Out" },
+];
+
+type recentworkbutton = {
+  isSelected: boolean;
+  label: string;
+  id: number;
+};
+export const recentWorkButton = [
+  { id: 0, isSelected: true, label: "Animation" },
+  { id: 1, isSelected: false, label: "Design" },
+  { id: 2, isSelected: false, label: "Socmed" },
+  { id: 3, isSelected: false, label: "WebApp" },
+];
+
+type recentworkcard = {
+  title: string;
+  type: string;
+  client: string;
+  desc: string;
+  date: string;
+  imgsrc: StaticImageData;
+};
+export const recentWorkCards: recentworkcard[] = [
   {
-    question: "What Payment Methods Does Deza Accept?",
-    answer:
-      "Deza accepts a variety of payment methods, including credit cards, PayPal, and bank transfers. You can choose the option that is most convenient for you.",
-    selected: false,
+    title: "The Big Project",
+    type: "Animation",
+    client: "Deza Studio",
+    desc: "We specialize in bringing products and brands to life through captivating animations, crafting distinctive brand logos that reflect your essence.",
+    date: "10-12-2023",
+    imgsrc: imgOne,
   },
   {
-    question: "Can I Customize Deza's Services for My Business Needs?",
-    answer:
-      "Absolutely! Deza understands that each business is unique. We offer customizable services to tailor our solutions to meet the specific needs and goals of your business.",
-    selected: false,
+    title: "Creative Design",
+    type: "Animation",
+    client: "PixelCraft",
+    desc: "Our graphic design services create a visual language for your brand that is consistent across different contexts.",
+    date: "11-20-2023",
+    imgsrc: imgTwo,
   },
   {
-    question: "How Fast Can I See Results with Deza's Services?",
-    answer:
-      "The speed of results may vary depending on the specific service and your business goals. Our team works efficiently to deliver results as quickly as possible while ensuring quality and effectiveness.",
-    selected: false,
+    title: "Product Showcase",
+    type: "WebApp",
+    client: "Tech Innovators",
+    desc: "Showcasing products online with responsive and user-friendly web development services for enhanced user experience.",
+    date: "12-05-2023",
+    imgsrc: imgThree,
   },
   {
-    question: "Does Deza Provide Training for Clients?",
-    answer:
-      "Yes, Deza offers training sessions for clients to familiarize them with our services and platforms. We want to ensure that you are comfortable and confident in utilizing our solutions for your business.",
-    selected: false,
+    title: "E-commerce Platform",
+    type: "WebApp",
+    client: "Shopify Emporium",
+    desc: "Building a robust e-commerce platform to help businesses thrive in the online marketplace.",
+    date: "01-15-2024",
+    imgsrc: imgFour,
   },
   {
-    question: "Can I Upgrade or Downgrade My Service Plan?",
-    answer:
-      "Certainly! Deza understands that your business needs may change over time. You can easily upgrade or downgrade your service plan to align with your evolving requirements.",
-    selected: false,
+    title: "Mobile App Development",
+    type: "Design",
+    client: "App Innovations",
+    desc: "Creating innovative and user-friendly mobile applications to meet the evolving needs of your users.",
+    date: "02-28-2024",
+    imgsrc: imgFive,
+  },
+  {
+    title: "Social Media Campaign",
+    type: "Design",
+    client: "Digital Buzz",
+    desc: "Strategizing and executing engaging social media campaigns to boost your brand's online presence.",
+    date: "03-10-2024",
+    imgsrc: imgSix,
+  },
+  {
+    title: "Corporate Branding",
+    type: "Animation",
+    client: "Global Enterprises",
+    desc: "Crafting a strong corporate identity through effective branding strategies and design elements.",
+    date: "04-22-2024",
+    imgsrc: imgSeven,
+  },
+  {
+    title: "Event Promotion",
+    type: "Animation",
+    client: "Event Dynamics",
+    desc: "Promoting events with eye-catching promotional materials and digital marketing strategies.",
+    date: "05-05-2024",
+    imgsrc: imgEight,
+  },
+  {
+    title: "Health and Wellness App",
+    type: "WebApp",
+    client: "Wellness Innovate",
+    desc: "Developing a health and wellness app to empower users in achieving their fitness goals.",
+    date: "06-18-2024",
+    imgsrc: imgNine,
+  },
+  {
+    title: "Educational Platform",
+    type: "WebApp",
+    client: "LearnHub",
+    desc: "Building an interactive educational platform to facilitate seamless learning experiences for students.",
+    date: "07-01-2024",
+    imgsrc: imgTen,
+  },
+  {
+    title: "Travel Exploration Site",
+    type: "Socmed",
+    client: "Travel Discoveries",
+    desc: "Creating a visually stunning website for travel enthusiasts to explore and plan their next adventure.",
+    date: "08-14-2024",
+    imgsrc: imgEleven,
+  },
+  {
+    title: "Restaurant App",
+    type: "Socmed",
+    client: "Foodie Delight",
+    desc: "Developing a feature-rich app for restaurants to enhance customer engagement and streamline operations.",
+    date: "09-27-2024",
+    imgsrc: imgTwelve,
+  },
+  {
+    title: "Fashion Brand Launch",
+    type: "Design",
+    client: "Chic Couture",
+    desc: "Launching a new fashion brand with a visually appealing website and online marketing strategies.",
+    date: "10-10-2024",
+    imgsrc: imgThirteen,
+  },
+  {
+    title: "Tech Conference",
+    type: "Design",
+    client: "Design",
+    desc: "Designing promotional materials and managing the online presence for a tech conference.",
+    date: "11-23-2024",
+    imgsrc: imgFourteen,
+  },
+  {
+    title: "Real Estate Website",
+    type: "Socmed",
+    client: "Dream Homes",
+    desc: "Building a user-friendly real estate website for property listings and seamless customer experiences.",
+    date: "12-06-2024",
+    imgsrc: imgFifteen,
+  },
+  {
+    title: "Gaming App Development",
+    type: "Socmed",
+    client: "Game Galaxy",
+    desc: "Creating an engaging gaming app with stunning visuals and immersive gameplay experiences.",
+    date: "01-19-2025",
+    imgsrc: imgSixteen,
   },
 ];

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { faqCard } from "../constant/index";
 
@@ -13,13 +15,9 @@ const Faq = () => {
     faqCard.map((item, index) => ({ id: index, isSelectedd: item.selected }))
   );
 
-  // const handleClick = (index) => {
-  //   setIsSelected(prev => prev.map(item => (item.id === index ? {...item, item.isSelected : !item.isSelected} : item)))
-  // }
-
-  const handleClick = (index: number) => {
-    setIsSelected((prevSelected) =>
-      prevSelected.map((item) =>
+  const handleClickk = (index: number) => {
+    setIsSelected((prev) =>
+      prev.map((item) =>
         item.id === index ? { ...item, isSelectedd: !item.isSelectedd } : item
       )
     );
@@ -35,7 +33,7 @@ const Faq = () => {
             question={item.question}
             answer={item.answer}
             isSelected={isSelected[index].isSelectedd}
-            handleClick={() => handleClick(index)}
+            handleClick={() => handleClickk(index)}
           />
         ))}
       </div>

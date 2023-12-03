@@ -1,4 +1,3 @@
-import React from "react";
 import { IoIosStar, IoMdPerson } from "react-icons/io";
 
 const ClientReviewCard = () => {
@@ -15,7 +14,7 @@ const ClientReviewCard = () => {
         <IoIosStar />
       </div>
       <div className="text-left font-bold">
-        "Our Experience working with Deza Digital was exceptional.""
+        Our Experience working with Deza Digital was exceptional
       </div>
       <div className="p-4 text-white bg-zinc-400 rounded-full self-start">
         <IoMdPerson />

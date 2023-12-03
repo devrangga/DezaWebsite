@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { agencyInNumber } from "../constant/index";
 import { useSpring, animated } from "react-spring";
@@ -28,12 +30,12 @@ function Number({ n }: NumberProps) {
 const AgenyInNumbers = () => {
   return (
     <div className="w-[15rem] sm:w-[75%] mx-auto mt-8 flex flex-col gap-4">
-      <h1 className="text-center text-2xl font-bold">Agency In Numbers</h1>
+      <h1 className="text-center text-3xl font-bold">Agency In Numbers</h1>
       <div className="flex flex-col sm:flex-row justify-around items-center gap-4 text-white bg-gradient-to-t rounded-lg from-zinc-950 to-zinc-800 p-8">
         {agencyInNumber.map((item, index) => (
           <div
             key={index}
-            className="text-center flex flex-col gap-2 items-center justify-center"
+            className="text-center flex flex-col  gap-2 items-center justify-center"
           >
             <h1 className="text-2xl font-bold flex flex-row">
               <Number n={item.count} />+
