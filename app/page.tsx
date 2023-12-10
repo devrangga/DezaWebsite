@@ -7,6 +7,7 @@ import WhyDeza from "./sections/WhyDeza";
 import AgenyInNumbers from "./sections/AgenyInNumbers";
 import Faq from "./sections/Faq";
 import RecentWorks from "./sections/RecentWorks";
+import Footer from "./sections/Footer";
 
 const page: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const page: React.FC = () => {
       <RecentWorks />
       <ClientReview />
       <Faq />
+      <Footer />
     </main>
   );
 };

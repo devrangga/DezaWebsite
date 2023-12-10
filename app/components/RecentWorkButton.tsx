@@ -16,7 +16,7 @@ const RecentWorkButton: React.FC<recentWorkButtonProps> = ({
       onClick={handleSelected}
       className={`${
         isSelected ? "bg-zinc-500 text-zinc-100" : "bg-zinc-200 text-zinc-900"
-      } px-6 py-3 rounded-lg w-full`}
+      } px-6 py-2 rounded-lg w-full`}
     >
       {label}
     </button>

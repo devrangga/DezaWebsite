@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { recentWorkButton, recentWorkCards } from "../constant";
 import RecentWorkCard from "../components/RecentWorkCard";
 import RecentWorkButton from "../components/RecentWorkButton";
+import Link from "next/link";
 
 interface isButtonActiveInterface {
   id: number;
@@ -35,18 +36,20 @@ const RecentWorks = () => {
   return (
     <div className="w-[75%] mx-auto flex flex-col gap-8 mt-8 justify-center items-center text-center">
       <h1 className="text-3xl font-bold">Our Recent Works</h1>
-      <button className="bg-zinc-900 text-zinc-50 px-6 py-3 rounded-lg w-[50%]">
-        View All
-      </button>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-        {recentWorkButton.map((item, index) => (
-          <RecentWorkButton
-            key={index}
-            label={item.label}
-            isSelected={isButtonActive[index].isSelected}
-            handleSelected={() => handleSelected(index)}
-          />
-        ))}
+      <div className="flex flex-col gap-4 items-center w-full">
+        <button className="bg-zinc-900 text-zinc-50 px-6 py-2 rounded-lg w-[50%]">
+          <Link href={"portfos"}>View All</Link>
+        </button>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+          {recentWorkButton.map((item, index) => (
+            <RecentWorkButton
+              key={index}
+              label={item.label}
+              isSelected={isButtonActive[index].isSelected}
+              handleSelected={() => handleSelected(index)}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-8">
