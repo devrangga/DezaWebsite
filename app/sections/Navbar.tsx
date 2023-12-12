@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { navbarData } from "../constant";
+import { navbar } from "../constant/index";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -26,10 +27,10 @@ const Navbar: React.FC = () => {
       {isLarge ? (
         <div
           className={
-            "flex justify-between items-center border-zinc-400 border-[1px] px-20 py-6 text-lg rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50 text-zinc-200 hover:text-zinc-50"
+            "flex justify-between items-center border-zinc-400 border-[1.5px] px-20 py-6 text-lg rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50 text-zinc-200 hover:text-zinc-50"
           }
         >
-          {navbarData.map((item, index) => (
+          {navbarData.map((item: navbar, index: number) => (
             <Link key={index} href={item.url} className="hover:cursor-pointer">
               {item.title}
             </Link>
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
       ) : (
         <div
           className={
-            "flex justify-between items-center border-zinc-400 border-[1px] px-6 py-4 rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50"
+            "flex justify-between items-center border-zinc-400 border-[1.5px] px-6 py-4 rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50"
           }
         >
           <Image
