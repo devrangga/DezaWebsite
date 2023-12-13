@@ -3,7 +3,7 @@ import WhyDezaButton from "../components/WhyDezaButton";
 
 const WhyDeza = () => {
   return (
-    <div className="w-[75%] mx-auto flex flex-col gap-4 mt-8">
+    <div className="w-[75%] lg:w-[768px] mx-auto flex flex-col gap-4 mt-8">
       <h1 className="text-3xl font-bold">Why Deza?</h1>
       <p>
         We specialize in bringing products and brands to life through

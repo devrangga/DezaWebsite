@@ -73,7 +73,7 @@ const RecentWorks = () => {
   console.log(handleIsVisible(5));
 
   return (
-    <div className="w-[75%] mx-auto flex flex-col gap-8 mt-8 justify-center items-center text-center">
+    <div className="w-[75%] md:max-w-[768px] mx-auto flex flex-col gap-8 mt-8 justify-center items-center text-center">
       <h1 className="text-3xl font-bold">Our Recent Works</h1>
       <div className="flex flex-col gap-4 items-center w-full">
         <button className="bg-zinc-900 text-zinc-50 px-6 py-2 rounded-lg w-[50%]">

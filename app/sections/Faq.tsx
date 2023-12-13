@@ -24,7 +24,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="w-[75%] mx-auto flex flex-col gap-4 mt-8">
+    <div className="w-[75%] md:max-w-[768px] mx-auto flex flex-col gap-4 mt-8">
       <h1 className="text-3xl font-bold text-center">FAQ&apos;s</h1>
       <div className="flex flex-col gap-8">
         {faqCard.map((item, index) => (

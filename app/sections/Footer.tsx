@@ -7,7 +7,7 @@ import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <div className="relative mt-40">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[75%] mx-auto flex flex-col justify-center items-center gap-4 bg-zinc-800 border-[1px] border-zinc-50 rounded-2xl shadow-2xl py-6">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[75%] md:max-w-[768px] mx-auto flex flex-col justify-center items-center gap-4 bg-zinc-800 border-[1px] border-zinc-50 rounded-2xl shadow-2xl py-6">
         <div className="bg-zinc-900 w-fit p-3 border-[1px] border-zinc-100 rounded-xl aspect-square flex justify-center items-center">
           <Image
             src={"/images/dezaLogo.svg"}

@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import ClientReviewCard from "../components/ClientReviewCard";
 
 const ClientReview = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [windowWidth, setWindowWidth] = useState<number>(1025);
 
   useEffect(() => {
     const windowX = () => {
@@ -40,7 +40,7 @@ const ClientReview = () => {
   }
 
   return (
-    <div className="flex flex-col gap-4 mt-8 w-[75%] mx-auto">
+    <div className="flex flex-col gap-4 mt-8 w-[75%] md:w-[768px] mx-auto">
       <h1 className="text-center text-3xl font-bold">Client Reviews.</h1>
       <Swiper
         autoplay={{

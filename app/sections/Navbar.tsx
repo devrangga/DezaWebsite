@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   const isLarge: boolean = windowWidth > 1024;
 
   return (
-    <section className="fixed z-20 w-[75%] top-10 -translate-x-1/2 left-1/2">
+    <section className="fixed z-20 w-[75%] md:max-w-[768px] top-10 -translate-x-1/2 left-1/2">
       {isLarge ? (
         <div
           className={
