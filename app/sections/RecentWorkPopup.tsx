@@ -27,7 +27,7 @@ const RecentWorkPopup: React.FC<RecentWorkPopupProps> = ({
     <div
       className={`${
         isVisible() ? "grid grid-rows-2" : "hidden opacity-0"
-      }  h-[70%] w-[75%] md:w-[768px] md:h-[60%] bg-gradient-to-t from-zinc-950 to-zinc-800 text-zinc-50 shadow-2xl rounded-xl overflow-hidden p-4  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50`}
+      }  h-[70%] w-[75%] md:max-w-[768px] md:h-[60%] bg-gradient-to-t from-zinc-950 to-zinc-800 text-zinc-50 shadow-2xl rounded-xl overflow-hidden p-4  fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50`}
     >
       <div className="overflow-hidden rounded-lg shadow-2xl relative">
         <Image

@@ -8,7 +8,7 @@ import { navbar } from "../constant/index";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [windowWidth, setWindowWith] = useState<number>(0);
+  const [windowWidth, setWindowWith] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     const handleResizeWidth = () => {
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       {isLarge ? (
         <div
           className={
-            "flex justify-between items-center border-zinc-400 border-[1.5px] px-20 py-6 text-lg rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50 text-zinc-200 hover:text-zinc-50"
+            "flex justify-between items-center border-zinc-400 border-[1.5px] px-20 py-6 text-base rounded-lg backdrop-blur-lg bg-zinc-950/75 relative z-50 text-zinc-200 hover:text-zinc-50"
           }
         >
           {navbarData.map((item: navbar, index: number) => (
@@ -78,19 +78,19 @@ const Navbar: React.FC = () => {
             : "-translate-y-14 opacity-0 h-0"
         }  justify-center items-center relative z-30 transition-all ease-in-out duration-300 shadow-lg overflow-hidden`}
       >
-        <div className="text-lg text-zinc-300 font-semibold text-center py-4 bg-zinc-900 hover:brightness-125 hover:cursor-pointer rounded-t-lg">
+        <div className="text-base text-zinc-300 font-semibold text-center py-4 bg-zinc-900 hover:brightness-125 hover:cursor-pointer rounded-t-base">
           <Link href={"#"}>About</Link>
         </div>
-        <div className="text-lg text-zinc-300 font-semibold text-center py-4 bg-zinc-800 hover:brightness-125 hover:cursor-pointer">
+        <div className="text-base text-zinc-300 font-semibold text-center py-4 bg-zinc-800 hover:brightness-125 hover:cursor-pointer">
           <Link href={"#"}>Projects</Link>
         </div>
-        <div className="text-lg text-zinc-300 font-semibold text-center py-4 bg-zinc-900 hover:brightness-125 hover:cursor-pointer">
+        <div className="text-base text-zinc-300 font-semibold text-center py-4 bg-zinc-900 hover:brightness-125 hover:cursor-pointer">
           <Link href={"#"}>Reviews</Link>
         </div>
-        <div className="text-lg text-zinc-300 font-semibold text-center py-4 bg-zinc-800 hover:brightness-125 hover:cursor-pointer">
+        <div className="text-base text-zinc-300 font-semibold text-center py-4 bg-zinc-800 hover:brightness-125 hover:cursor-pointer">
           <Link href={"#"}>Faqs</Link>
         </div>
-        <div className="text-lg text-zinc-300 font-semibold text-center py-4 bg-zinc-900 hover:brightness-125 hover:cursor-pointer rounded-b-lg">
+        <div className="text-base text-zinc-300 font-semibold text-center py-4 bg-zinc-900 hover:brightness-125 hover:cursor-pointer rounded-b-lg">
           <Link href={"#"}>Reach Out</Link>
         </div>
       </div>

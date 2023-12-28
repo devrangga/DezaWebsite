@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import ClientReviewCard from "../components/ClientReviewCard";
 
 const ClientReview = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(1025);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     const windowX = () => {
@@ -50,12 +50,13 @@ const ClientReview = () => {
         spaceBetween={15}
         slidesPerView={whichOne}
         centeredSlides={false}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        pagination={false}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className={whichWidth}
+        className={`${whichWidth}`}
       >
         <SwiperSlide>
           <ClientReviewCard />

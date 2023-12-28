@@ -12,12 +12,12 @@ const RecentWorkCard: React.FC<recentWorkCardProps> = ({
   imgsrc,
 }) => {
   return (
-    <div className="rounded-xl overflow-hidden relative group hover:shadow-xl/50">
+    <div className="rounded-xl overflow-hidden relative group hover:shadow-xl/50 border-2 border-zinc-300/0 hover:border-zinc-500">
       <Image
         src={imgsrc}
         alt="image"
         style={{ width: "100%", height: "100%" }}
-        className="group-hover:scale-110 transition-transform ease-in-out"
+        className="group-hover:scale-110 object-cover transition-transform ease-in-out"
       />
       <button className="absolute w-full h-full top-0 group-hover:bg-gradient-to-t group-hover:from-zinc-50/20 group-hover:to-zinc-50 backdrop-blur-0 blending group-hover:backdrop-blur-sm flex items-center justify-center text-center transition-all ease-in-out">
         <p

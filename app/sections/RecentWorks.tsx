@@ -62,6 +62,7 @@ const RecentWorks = () => {
   };
 
   const handleClosePopUp = (index: number) => {
+    3;
     setCardPopUp((prev) =>
       prev.map((item) => {
         return item.id === index ? { ...item, visible: !item.visible } : item;
@@ -69,16 +70,16 @@ const RecentWorks = () => {
     );
   };
 
-  console.log(cardPopUpData);
-  console.log(handleIsVisible(5));
-
   return (
     <div className="w-[75%] md:max-w-[768px] mx-auto flex flex-col gap-8 mt-8 justify-center items-center text-center">
       <h1 className="text-3xl font-bold">Our Recent Works</h1>
       <div className="flex flex-col gap-4 items-center w-full">
-        <button className="bg-zinc-900 text-zinc-50 px-6 py-2 rounded-lg w-[50%]">
-          <Link href={"portfos"}>View All</Link>
-        </button>
+        <Link
+          href={"portfos"}
+          className="bg-zinc-900 text-zinc-50 px-6 py-2 rounded-lg w-[50%]"
+        >
+          View All
+        </Link>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
           {recentWorkButton.map((item: recentWorkButton, index: number) => (
             <RecentWorkButton
